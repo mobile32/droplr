@@ -3,7 +3,7 @@ import "./stylesheets/application.sass";
 
 function App() {
   return (
-    <div className="content">
+    <div className="app">
       <div className="nav">
         <div className="nav__logo">Logo</div>
         <ul className="nav__links">
@@ -24,10 +24,11 @@ function App() {
           </li>
         </ul>
         <div className="nav__buttons">
-          <div className="nav__button">Log in</div>
-          <div className="nav__button">Sign up</div>
+          <div className="nav__button -secondary">Log in</div>
+          <div className="nav__button -primary">Sign up</div>
         </div>
       </div>
+      <div className="content" />
     </div>
   );
 }

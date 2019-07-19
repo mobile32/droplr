@@ -1,7 +1,11 @@
+.app
+  background-image: linear-gradient(to right, $brand-secondary 0%,  $color-white 100%)
+
 .content
-  margin: $m-md $m-xxl
+  //background-image: linear-gradient(to right, $brand-secondary 0%,  $color-white 100%)
 
 .nav
+  margin: $m-md $m-xxl
   display: flex
   justify-content: flex-end
   align-items: baseline
@@ -11,7 +15,7 @@
 
   &__links
     display: flex
-    list-style-type: nonegaag
+    list-style-type: none
 
   &__link
     a
@@ -24,4 +28,18 @@
 
   &__button
     margin: 0 $m-md
+    padding: $m-sm $m-lg
+    font-weight: $font-weight-bold
+    text-transform: uppercase
+    border-radius: $border-radius-base / 4
+
+    &.-primary
+      background-image: linear-gradient(to top right, $brand-primary 0%,  rgb(139, 93, 222) 100%)
+      border: 1px solid $button-border-color
+      color: $color-white
+
+    &.-secondary
+      background-image: linear-gradient(to top right, $brand-secondary 0%,  $color-white 100%)
+      border: 1px solid $button-border-color
+
 
