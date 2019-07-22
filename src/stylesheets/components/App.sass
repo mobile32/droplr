@@ -1,11 +1,9 @@
 .app
   background-image: linear-gradient(to right, $brand-secondary 0%,  $color-white 100%)
 
-.content
-  //background-image: linear-gradient(to right, $brand-secondary 0%,  $color-white 100%)
-
 .nav
-  margin: $m-md $m-xxl
+  margin: 0 $m-xxl * 2
+  padding-top: $m-md
   display: flex
   justify-content: flex-end
   align-items: baseline
@@ -22,6 +20,12 @@
       color: $brand-text
       text-decoration: none
       margin: 0 $m-md
+      border-bottom: 2px solid transparent
+      transition: color .3s, border-color .3s
+
+      &:hover
+        color: $brand-primary
+        border-color: $brand-primary
 
   &__buttons
     display: flex
@@ -32,14 +36,28 @@
     font-weight: $font-weight-bold
     text-transform: uppercase
     border-radius: $border-radius-base / 4
+    cursor: pointer
+    transition: box-shadow .5s
+
+    &:hover
+      box-shadow: 0 2px 15px 0 rgba($brand-primary, 0.3)
 
     &.-primary
-      background-image: linear-gradient(to top right, $brand-primary 0%,  rgb(139, 93, 222) 100%)
+      background-image: linear-gradient(to bottom left, rgba($brand-primary, 0.8),  rgba($brand-primary, 1))
       border: 1px solid $button-border-color
       color: $color-white
 
     &.-secondary
-      background-image: linear-gradient(to top right, $brand-secondary 0%,  $color-white 100%)
+      background-image: linear-gradient(to bottom left, rgba($brand-secondary, 0.5),  rgba($brand-secondary, 1))
       border: 1px solid $button-border-color
+
+.subscribe
+  display: flex
+  justify-content: space-around
+  align-items: center
+  padding: $m-xxl
+
+
+
 
 
