@@ -2,11 +2,11 @@
   background-image: linear-gradient(to right, $brand-secondary 0%,  $color-white 100%)
 
 .nav
-  margin: 0 $m-xxl * 2
+  margin: 0 $m-xxl
   padding-top: $m-md
   display: flex
   justify-content: flex-end
-  align-items: baseline
+  align-items: center
 
   &__logo
     margin-right: auto
@@ -35,9 +35,10 @@
     padding: $m-sm $m-lg
     font-weight: $font-weight-bold
     text-transform: uppercase
-    border-radius: $border-radius-base / 4
+    border-radius: $border-radius-sm
     cursor: pointer
     transition: box-shadow .5s
+    outline: none
 
     &:hover
       box-shadow: 0 2px 15px 0 rgba($brand-primary, 0.3)
@@ -53,11 +54,68 @@
 
 .subscribe
   display: flex
-  justify-content: space-around
+  justify-content: center
   align-items: center
   padding: $m-xxl
 
+  &__header, &__pro, &__email-label
+    color: $color-black
 
+  &__animation, &__start
+    padding: 0 $m-lg * 2
+    flex-basis: 600px
+
+  &__animation
+    height: 100px
+    width: 100px
+    animation-name: play
+    animation-duration: 2s
+    animation-iteration-count: infinite
+
+  &__field
+    display: flex
+    flex-direction: column
+
+  &__email-input
+    background-color: $placeholder-color
+    border-radius: $border-radius-sm
+    height: 36px
+    border: 1px solid $color-gray-light
+    outline: none
+    padding: $m-xs
+
+    ::selection
+      background: blue
+
+  &__links
+    margin: $m-base 0
+    display: flex
+    justify-content: space-between
+
+  &__privacy-policy
+    color: $color-gray
+
+  &__get-started
+    padding: $m-sm $m-lg
+    font-weight: $font-weight-bold
+    text-transform: uppercase
+    border-radius: $border-radius-sm
+    cursor: pointer
+    transition: box-shadow .5s
+    outline: none
+    background-image: linear-gradient(to bottom left, rgba($brand-success, 0.8),  rgba($brand-success, 1))
+    border: 1px solid $button-border-color
+    color: $color-white
+
+    &:hover
+      box-shadow: 0 2px 15px 0 rgba($brand-success, 0.3)
+
+
+@keyframes play
+  0%
+    color: red
+  100%
+    color: black
 
 
 
