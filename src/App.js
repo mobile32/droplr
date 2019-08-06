@@ -1,7 +1,6 @@
 import React from "react";
 import "./stylesheets/application.sass";
 import logo from "./images/logo.png";
-import play from "./images/play.svg"
 
 function App() {
   return (
@@ -31,7 +30,25 @@ function App() {
         </div>
       </div>
       <div className="subscribe">
-        <img className="subscribe__animation" alt="loading" src={play} />
+        <div className="subscribe__animation-container">
+          <div className="subscribe__animation">
+            <svg
+              aria-hidden="true"
+              focusable="false"
+              data-prefix="fas"
+              data-icon="caret-right"
+              className="subscribe__icon"
+              role="img"
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 192 512"
+            >
+              <path
+                fill="currentColor"
+                d="M0 384.662V127.338c0-17.818 21.543-26.741 34.142-14.142l128.662 128.662c7.81 7.81 7.81 20.474 0 28.284L34.142 398.804C21.543 411.404 0 402.48 0 384.662z"
+              />
+            </svg>
+          </div>
+        </div>
         <div className="subscribe__start">
           <h2 className="subscribe__header">
             Communicate.
@@ -43,7 +60,9 @@ function App() {
           </p>
           <div className="subscribe__field">
             <b>
-              <label className="subscribe__email-label" htmlFor="email">Email address</label>
+              <label className="subscribe__email-label" htmlFor="email">
+                Email address
+              </label>
             </b>
             <input className="subscribe__email-input" id="email" type="text" />
           </div>
