@@ -126,13 +126,56 @@
       box-shadow: 0 2px 15px 0 rgba($brand-success, 0.3)
 
 
-@keyframes play
-  0%
-    box-shadow: 0 0 50px 5px rgba($brand-primary, 0.4)
-    color:  $color-gray
-  100%
-    box-shadow: 0 0 10px 5px rgba($brand-primary, 0.5)
-    color: $brand-primary
+  @keyframes play
+    0%
+      box-shadow: 0 0 50px 5px rgba($brand-primary, 0.4)
+      color:  $color-gray
+    100%
+      box-shadow: 0 0 10px 5px rgba($brand-primary, 0.5)
+      color: $brand-primary
 
+.testimonials
+  display: flex
+  flex-direction: column
+  align-items: center
+
+  &__slider
+    display: flex
+    justify-content: center
+    align-items: center
+    position: relative
+
+  &__portrait
+    max-height: 300px
+
+  &__left-panel
+    flex-basis: 300px
+    display: flex
+    flex-direction: column
+    align-items: center
+
+  &__quotation
+    background-color: white
+    box-shadow: 0 0 20px 5px rgba($color-gray-light, 0.5)
+    padding: $m-base
+
+  &__arrow
+    background-color: $color-silver
+    padding: $m-sm
+
+  &__buttons
+    display: flex
+    position: absolute
+    bottom: 0
+
+  &__button
+    background-color: $color-gray-light
+    margin: 0 5px
+    width: 30px
+    height: 3px
+    cursor: pointer
+
+    &.-active
+      background-color: $color-gray-dark
 
 

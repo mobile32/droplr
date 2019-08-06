@@ -1,6 +1,7 @@
 import React from "react";
 import "./stylesheets/application.sass";
 import logo from "./images/logo.png";
+import woman from "./images/businesswoman-portrait-black-top-grey-background.jpg";
 
 function App() {
   return (
@@ -80,6 +81,31 @@ function App() {
             </div>
             <button className="subscribe__get-started">Get Started</button>
           </div>
+        </div>
+      </div>
+      <div className="testimonials">
+        <h2>Find out what others make of us:</h2>
+        <div className="testimonials__slider">
+          <div className="testimonials__arrow">{"<"}</div>
+          <div className="testimonials__left-panel">
+            <div className="testimonials__quotation">
+              <h4>Great for sharing screenshots!</h4>
+              <p>
+                Dropl is the simplest, most reliable, universal way to share a
+                file with anyone anywhere, I cant't imagine a quicker way to
+                exchange a screenshot than dropl.
+              </p>
+              <p>Des Traynor</p>
+              <span>Co-founder @Intercom</span>
+            </div>
+            <div className="testimonials__buttons">
+              <div className="testimonials__button -active" />
+              <div className="testimonials__button" />
+              <div className="testimonials__button" />
+            </div>
+          </div>
+          <img className="testimonials__portrait" src={woman} alt="woman" />
+          <div className="testimonials__arrow">{">"}</div>
         </div>
       </div>
     </div>
