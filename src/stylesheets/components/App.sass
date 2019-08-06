@@ -82,6 +82,11 @@
     justify-content: center
     width: 100px
 
+    &:hover
+      color: $brand-primary
+      animation: none
+      box-shadow: 0 0 5px 5px rgba($brand-primary, 0.7)
+
   &__icon
     height: 50px
     transform: translateX(5%)
@@ -128,10 +133,10 @@
 
   @keyframes play
     0%
-      box-shadow: 0 0 50px 5px rgba($brand-primary, 0.4)
+      box-shadow: 0 0 40px 5px rgba($brand-primary, 0.4)
       color:  $color-gray
     100%
-      box-shadow: 0 0 10px 5px rgba($brand-primary, 0.5)
+      box-shadow: 0 0 20px 5px rgba($brand-primary, 0.5)
       color: $brand-primary
 
 .testimonials
