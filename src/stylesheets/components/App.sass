@@ -169,7 +169,8 @@
 
   &__arrow
     background-color: $color-silver
-    padding: $m-sm
+    padding: $m-md
+    cursor: pointer
 
   &__buttons
     display: flex
@@ -197,3 +198,21 @@
 
   &__right-quote
     align-self: flex-end
+
+  &__header
+    color: $color-black
+
+    &.-space
+      margin: $m-xxl * 2 0 $m-xxl 0
+
+  &__companies
+    display: flex
+
+  &__company
+    height: 50px
+    margin: 0 $m-sm
+    color: $color-gray-light
+    transition: color .3s
+
+    &:hover
+      color: $color-gray

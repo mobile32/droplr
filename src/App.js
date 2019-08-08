@@ -2,7 +2,7 @@ import React from "react";
 import "./stylesheets/application.sass";
 import logo from "./images/logo.png";
 import woman from "./images/businesswoman-portrait-black-top-grey-background.jpg";
-import { Play, RightQute, LeftQoute, RightQuote } from "./images/Icons";
+import { Play, LeftQoute, RightQuote, Amazon } from "./images/Icons";
 
 function App() {
   return (
@@ -34,7 +34,7 @@ function App() {
       <div className="subscribe">
         <div className="subscribe__animation-container">
           <div className="subscribe__animation">
-            <Play />
+            <Play className="subscribe__icon" />
           </div>
         </div>
         <div className="subscribe__start">
@@ -71,13 +71,13 @@ function App() {
         </div>
       </div>
       <div className="testimonials">
-        <h2>Find out what others make of us:</h2>
+        <h2 className="testimonials__header -space">Find out what others make of us:</h2>
         <div className="testimonials__slider">
           <div className="testimonials__arrow">{"<"}</div>
           <div className="testimonials__left-panel">
             <div className="testimonials__quotation">
               <LeftQoute className="testimonials__left-quote" />
-              <h4>Great for sharing screenshots!</h4>
+              <h4 className="testimonials__header">Great for sharing screenshots!</h4>
               <p>
                 Dropl is the simplest, most reliable, universal way to share a
                 file with anyone anywhere, I cant't imagine a quicker way to
@@ -97,6 +97,16 @@ function App() {
           </div>
           <img className="testimonials__portrait" src={woman} alt="woman" />
           <div className="testimonials__arrow">{">"}</div>
+        </div>
+        <h3 className="testimonials__header -space">Smart companies use smart tools</h3>
+        <div className="testimonials__companies">
+          <Amazon className="testimonials__company"/>
+          <Amazon className="testimonials__company"/>
+          <Amazon className="testimonials__company"/>
+          <Amazon className="testimonials__company"/>
+          <Amazon className="testimonials__company"/>
+          <Amazon className="testimonials__company"/>
+          <Amazon className="testimonials__company"/>
         </div>
       </div>
     </div>
