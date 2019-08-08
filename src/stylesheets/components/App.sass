@@ -143,6 +143,7 @@
   display: flex
   flex-direction: column
   align-items: center
+  margin-bottom: $m-base
 
   &__slider
     display: flex
@@ -151,7 +152,7 @@
     position: relative
 
   &__portrait
-    max-height: 300px
+    max-height: 500px
 
   &__left-panel
     flex-basis: 300px
@@ -160,6 +161,8 @@
     align-items: center
 
   &__quotation
+    display: flex
+    flex-direction: column
     background-color: white
     box-shadow: 0 0 20px 5px rgba($color-gray-light, 0.5)
     padding: $m-base
@@ -183,4 +186,14 @@
     &.-active
       background-color: $color-gray-dark
 
+  &__role
+    font-size: $font-size-sm
 
+  &__left-quote,
+  &__right-quote
+    width: 30px
+    color: $color-silver
+    margin: $m-base 0
+
+  &__right-quote
+    align-self: flex-end
