@@ -8,72 +8,39 @@
   margin: 0 $m-xxl
   padding-top: $m-md
 
+  &__menu-icon
+    color: $brand-primary
+    height: 40px
+
   &__logo
     margin-right: auto
 
   &__links
-    display: flex
-    list-style-type: none
-
-  &__link
-    a
-      border-bottom: 2px solid transparent
-      color: $brand-text
-      margin: 0 $m-md
-      text-decoration: none
-      transition: color .3s, border-color .3s
-
-      &:hover
-        border-color: $brand-primary
-        color: $brand-primary
+    display: none
 
   &__buttons
-    display: flex
-
-  &__button
-    border-radius: $border-radius-sm
-    cursor: pointer
-    font-weight: $font-weight-bold
-    margin: 0 $m-md
-    outline: none
-    padding: $m-sm $m-lg
-    text-transform: uppercase
-    transition: box-shadow .5s
-
-    &:hover
-      box-shadow: 0 2px 15px 0 rgba($brand-primary, 0.3)
-
-    &.-primary
-      background-image: linear-gradient(to bottom left, rgba($brand-primary, 0.8),  rgba($brand-primary, 1))
-      border: 1px solid $button-border-color
-      color: $color-white
-
-    &.-secondary
-      background-image: linear-gradient(to bottom left, rgba($brand-secondary, 0.5),  rgba($brand-secondary, 1))
-      border: 1px solid $button-border-color
+    display: none
 
 .subscribe
   align-items: center
   display: flex
+  flex-direction: column
   justify-content: center
-  padding: $m-xxl * 2 $m-xxl
+  padding: $m-base
 
   &__header, &__pro, &__email-label
     color: $color-black
 
-  &__animation-container, &__start
-    flex-basis: 600px
-    padding: 0 $m-lg * 2
-
   &__animation-container
-    min-height: 300px
-    border: 2px solid $color-silver
-    border-radius: 5%
-    background-color: $brand-secondary
-
     align-items: center
+    background-color: $brand-secondary
+    border-radius: 5%
+    border: 2px solid $color-silver
     display: flex
     justify-content: center
+    margin-bottom: $m-lg
+    max-width: 600px
+    width: 100%
 
   &__animation
     align-items: center
@@ -85,12 +52,13 @@
     display: flex
     height: 100px
     justify-content: center
+    margin: $m-lg * 2 0
     width: 100px
 
     &:hover
-      color: $brand-primary
       animation: none
       box-shadow: 0 0 5px 5px rgba($brand-primary, 0.7)
+      color: $brand-primary
 
   &__icon
     height: 50px
@@ -114,6 +82,7 @@
 
   &__links
     display: flex
+    flex-wrap: wrap
     justify-content: space-between
     margin: $m-base 0
 
@@ -131,6 +100,7 @@
     padding: $m-sm $m-lg
     text-transform: uppercase
     transition: box-shadow .5s
+    white-space: nowrap
 
     &:hover
       box-shadow: 0 2px 15px 0 rgba($brand-success, 0.3)
@@ -145,61 +115,50 @@
       color: $brand-primary
 
 .testimonials
+  align-items: center
   display: flex
   flex-direction: column
-  align-items: center
-  margin-bottom: $m-base
+  margin: 0 auto
+  max-width: 600px
+  padding: $m-base
 
   &__slider
-    display: flex
-    justify-content: center
     align-items: center
+    display: flex
+    flex-direction: column
+    justify-content: center
     position: relative
 
   &__portrait
-    max-height: 500px
+    display: none
 
   &__left-panel
-    flex-basis: 300px
-    display: flex
-    flex-direction: column
     align-items: center
+    display: flex
+    flex-basis: 300px
+    flex-direction: column
 
   &__quotation
-    display: flex
-    flex-direction: column
     background-color: white
     box-shadow: 0 0 20px 5px rgba($color-gray-light, 0.5)
+    display: flex
+    flex-direction: column
     padding: $m-base
 
   &__arrow
-    background-color: $color-silver
-    padding: $m-md
-    cursor: pointer
+    display: none
 
   &__buttons
-    display: flex
-    position: absolute
-    bottom: 0
-
-  &__button
-    background-color: $color-gray-light
-    margin: 0 5px
-    width: 30px
-    height: 3px
-    cursor: pointer
-
-    &.-active
-      background-color: $color-gray-dark
+    display: none
 
   &__role
     font-size: $font-size-sm
 
   &__left-quote,
   &__right-quote
-    width: 30px
     color: $color-silver
     margin: $m-base 0
+    width: 30px
 
   &__right-quote
     align-self: flex-end
@@ -212,12 +171,104 @@
 
   &__companies
     display: flex
+    flex-wrap: wrap
 
   &__company
+    color: $color-gray-light
     height: 50px
     margin: 0 $m-sm
-    color: $color-gray-light
     transition: color .3s
 
     &:hover
       color: $color-gray
+
+//////////////////////////////////////////////////////////
++media-breakpoint-up(xl)
+  .nav
+    &__menu-icon
+      display: none
+
+    &__logo
+      margin-right: auto
+
+    &__links
+      display: flex
+      list-style-type: none
+
+    &__link
+      a
+        border-bottom: 2px solid transparent
+        color: $brand-text
+        margin: 0 $m-md
+        text-decoration: none
+        transition: color .3s, border-color .3s
+
+        &:hover
+          border-color: $brand-primary
+          color: $brand-primary
+
+    &__buttons
+      display: flex
+
+    &__button
+      border-radius: $border-radius-sm
+      cursor: pointer
+      font-weight: $font-weight-bold
+      margin: 0 $m-md
+      outline: none
+      padding: $m-sm $m-lg
+      text-transform: uppercase
+      transition: box-shadow .5s
+
+      &:hover
+        box-shadow: 0 2px 15px 0 rgba($brand-primary, 0.3)
+
+      &.-primary
+        background-image: linear-gradient(to bottom left, rgba($brand-primary, 0.8),  rgba($brand-primary, 1))
+        border: 1px solid $button-border-color
+        color: $color-white
+
+      &.-secondary
+        background-image: linear-gradient(to bottom left, rgba($brand-secondary, 0.5),  rgba($brand-secondary, 1))
+        border: 1px solid $button-border-color
+
+  .subscribe
+    flex-direction: row
+    padding: $m-xxl * 2 $m-xxl
+
+    &__animation-container, &__start
+      padding: 0 $m-lg * 2
+
+    &__links
+      flex-wrap: nowrap
+
+  .testimonials
+    max-width: none
+
+    &__slider
+      flex-direction: row
+
+    &__arrow
+      background-color: $color-silver
+      cursor: pointer
+      display: block
+      padding: $m-md
+
+    &__buttons
+      bottom: 0
+      display: flex
+      position: absolute
+
+    &__button
+      background-color: $color-gray-light
+      cursor: pointer
+      height: 3px
+      margin: 0 5px
+      width: 30px
+
+    &__portrait
+      display: block
+      max-height: 600px
+
+      &.-active
+        background-color: $color-gray-dark

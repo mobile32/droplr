@@ -2,7 +2,7 @@ import React from "react";
 import "./stylesheets/application.sass";
 import logo from "./images/logo.png";
 import woman from "./images/businesswoman-portrait-black-top-grey-background.jpg";
-import { Play, LeftQoute, RightQuote, Amazon } from "./images/Icons";
+import { Play, LeftQoute, RightQuote, Amazon, Menu } from "./images/Icons";
 
 function App() {
   return (
@@ -30,6 +30,9 @@ function App() {
           <button className="nav__button -secondary">Log in</button>
           <button className="nav__button -primary">Sign up</button>
         </div>
+        <a className="nav__menu" href="#menu">
+          <Menu className="nav__menu-icon" />
+        </a>
       </div>
       <div className="subscribe">
         <div className="subscribe__animation-container">
@@ -71,13 +74,17 @@ function App() {
         </div>
       </div>
       <div className="testimonials">
-        <h2 className="testimonials__header -space">Find out what others make of us:</h2>
+        <h2 className="testimonials__header -space">
+          Find out what others make of us:
+        </h2>
         <div className="testimonials__slider">
           <div className="testimonials__arrow">{"<"}</div>
           <div className="testimonials__left-panel">
             <div className="testimonials__quotation">
               <LeftQoute className="testimonials__left-quote" />
-              <h4 className="testimonials__header">Great for sharing screenshots!</h4>
+              <h4 className="testimonials__header">
+                Great for sharing screenshots!
+              </h4>
               <p>
                 Dropl is the simplest, most reliable, universal way to share a
                 file with anyone anywhere, I cant't imagine a quicker way to
@@ -87,7 +94,7 @@ function App() {
                 <b>Des Traynor</b>
               </div>
               <div className="testimonials__role">Co-founder @Intercom</div>
-              <RightQuote className="testimonials__right-quote"/>
+              <RightQuote className="testimonials__right-quote" />
             </div>
             <div className="testimonials__buttons">
               <div className="testimonials__button -active" />
@@ -98,15 +105,17 @@ function App() {
           <img className="testimonials__portrait" src={woman} alt="woman" />
           <div className="testimonials__arrow">{">"}</div>
         </div>
-        <h3 className="testimonials__header -space">Smart companies use smart tools</h3>
+        <h3 className="testimonials__header -space">
+          Smart companies use smart tools
+        </h3>
         <div className="testimonials__companies">
-          <Amazon className="testimonials__company"/>
-          <Amazon className="testimonials__company"/>
-          <Amazon className="testimonials__company"/>
-          <Amazon className="testimonials__company"/>
-          <Amazon className="testimonials__company"/>
-          <Amazon className="testimonials__company"/>
-          <Amazon className="testimonials__company"/>
+          <Amazon className="testimonials__company" />
+          <Amazon className="testimonials__company" />
+          <Amazon className="testimonials__company" />
+          <Amazon className="testimonials__company" />
+          <Amazon className="testimonials__company" />
+          <Amazon className="testimonials__company" />
+          <Amazon className="testimonials__company" />
         </div>
       </div>
     </div>
