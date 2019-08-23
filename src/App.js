@@ -1,29 +1,34 @@
-import React from "react";
+import React, {Fragment} from "react";
 import "./stylesheets/application.sass";
 import logo from "./images/logo.png";
 import woman from "./images/businesswoman-portrait-black-top-grey-background.jpg";
-import { Play, LeftQoute, RightQuote, Amazon, Menu } from "./images/Icons";
+
+import { ReactComponent as Play} from "./images/Play.svg";
+import { ReactComponent as LeftQoute} from "./images/LeftQoute.svg";
+import { ReactComponent as RightQuote} from "./images/RightQuote.svg";
+import { ReactComponent as Amazon} from "./images/Amazon.svg";
+import { ReactComponent as Menu} from "./images/Menu.svg";
 
 function App() {
   return (
-    <div className="app">
-      <div className="nav">
+    <Fragment>
+      <nav className="nav">
         <img alt="dropl" className="nav__logo" src={logo} />
         <ul className="nav__links">
-          <li className="nav__link">
-            <a href="#features">Features</a>
+          <li>
+            <a className="nav__link" href="#features">Features</a>
           </li>
-          <li className="nav__link">
-            <a href="#apps">Apps</a>
+          <li>
+            <a className="nav__link" href="#apps">Apps</a>
           </li>
-          <li className="nav__link">
-            <a href="#pricing">Pricing</a>
+          <li>
+            <a className="nav__link" href="#pricing">Pricing</a>
           </li>
-          <li className="nav__link">
-            <a href="#knowledge-base">Knowledge base</a>
+          <li>
+            <a className="nav__link" href="#knowledge-base">Knowledge base</a>
           </li>
-          <li className="nav__link">
-            <a href="#business">Business</a>
+          <li>
+            <a className="nav__link" href="#business">Business</a>
           </li>
         </ul>
         <div className="nav__buttons">
@@ -33,7 +38,7 @@ function App() {
         <a className="nav__menu" href="#menu">
           <Menu className="nav__menu-icon" />
         </a>
-      </div>
+      </nav>
       <div className="subscribe">
         <div className="subscribe__animation-container">
           <div className="subscribe__animation">
@@ -118,7 +123,7 @@ function App() {
           <Amazon className="testimonials__company" />
         </div>
       </div>
-    </div>
+    </Fragment>
   );
 }
 

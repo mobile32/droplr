@@ -1,5 +1,13 @@
-.app
-  background-image: linear-gradient(to right, $brand-secondary 0%,  $color-white 100%)
+@keyframes play
+  0%
+    box-shadow: 0 0 40px 5px rgba($brand-primary, 0.4)
+    color:  $color-gray
+  100%
+    box-shadow: 0 0 20px 5px rgba($brand-primary, 0.5)
+    color: $brand-primary
+
+body
+  background-image: linear-gradient(to right, $brand-secondary,  $color-white)
 
 .nav
   align-items: center
@@ -15,9 +23,7 @@
   &__logo
     margin-right: auto
 
-  &__links
-    display: none
-
+  &__links,
   &__buttons
     display: none
 
@@ -28,14 +34,16 @@
   justify-content: center
   padding: $m-base
 
-  &__header, &__pro, &__email-label
+  &__header,
+  &__pro,
+  &__email-label
     color: $color-black
 
   &__animation-container
     align-items: center
     background-color: $brand-secondary
     border-radius: 5%
-    border: 2px solid $color-silver
+    border: 2px solid $color-gray-lighter
     display: flex
     justify-content: center
     margin-bottom: $m-lg
@@ -77,8 +85,8 @@
     outline: none
     padding: $m-xs
 
-    ::selection
-      background: blue
+    &::selection
+      color: $brand-primary
 
   &__links
     display: flex
@@ -90,9 +98,9 @@
     color: $color-gray
 
   &__get-started
-    background-image: linear-gradient(to bottom left, rgba($brand-success, 0.8),  rgba($brand-success, 1))
+    background-image: linear-gradient(to bottom left, rgba($brand-success, 0.8),  $brand-success)
     border-radius: $border-radius-sm
-    border: 1px solid $button-border-color
+    border: 1px solid $brand-primary-light
     color: $color-white
     cursor: pointer
     font-weight: $font-weight-bold
@@ -105,15 +113,6 @@
     &:hover
       box-shadow: 0 2px 15px 0 rgba($brand-success, 0.3)
 
-
-  @keyframes play
-    0%
-      box-shadow: 0 0 40px 5px rgba($brand-primary, 0.4)
-      color:  $color-gray
-    100%
-      box-shadow: 0 0 20px 5px rgba($brand-primary, 0.5)
-      color: $brand-primary
-
 .testimonials
   align-items: center
   display: flex
@@ -121,13 +120,6 @@
   margin: 0 auto
   max-width: 600px
   padding: $m-base
-
-  &__slider
-    align-items: center
-    display: flex
-    flex-direction: column
-    justify-content: center
-    position: relative
 
   &__portrait
     display: none
@@ -145,9 +137,7 @@
     flex-direction: column
     padding: $m-base
 
-  &__arrow
-    display: none
-
+  &__arrow,
   &__buttons
     display: none
 
@@ -156,7 +146,7 @@
 
   &__left-quote,
   &__right-quote
-    color: $color-silver
+    color: $color-gray-lighter
     margin: $m-base 0
     width: 30px
 
@@ -196,16 +186,15 @@
       list-style-type: none
 
     &__link
-      a
-        border-bottom: 2px solid transparent
-        color: $brand-text
-        margin: 0 $m-md
-        text-decoration: none
-        transition: color .3s, border-color .3s
+      border-bottom: 2px solid transparent
+      color: $brand-text
+      margin: 0 $m-md
+      text-decoration: none
+      +animate(color, border-color)
 
-        &:hover
-          border-color: $brand-primary
-          color: $brand-primary
+      &:hover
+        border-color: $brand-primary
+        color: $brand-primary
 
     &__buttons
       display: flex
@@ -224,13 +213,13 @@
         box-shadow: 0 2px 15px 0 rgba($brand-primary, 0.3)
 
       &.-primary
-        background-image: linear-gradient(to bottom left, rgba($brand-primary, 0.8),  rgba($brand-primary, 1))
-        border: 1px solid $button-border-color
+        background-image: linear-gradient(to bottom left, rgba($brand-primary, 0.8),  $brand-primary)
+        border: 1px solid $brand-primary-light
         color: $color-white
 
       &.-secondary
-        background-image: linear-gradient(to bottom left, rgba($brand-secondary, 0.5),  rgba($brand-secondary, 1))
-        border: 1px solid $button-border-color
+        background-image: linear-gradient(to bottom left, rgba($brand-secondary, 0.5),  $brand-secondary)
+        border: 1px solid $brand-primary-light
 
   .subscribe
     flex-direction: row
@@ -247,9 +236,14 @@
 
     &__slider
       flex-direction: row
+      align-items: center
+      display: flex
+      justify-content: center
+      position: relative
+
 
     &__arrow
-      background-color: $color-silver
+      background-color: $color-gray-lighter
       cursor: pointer
       display: block
       padding: $m-md
