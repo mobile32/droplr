@@ -1,7 +1,7 @@
 import React from "react";
 import "./stylesheets/application.sass";
 import logo from "./images/logo.png";
-import woman from "./images/businesswoman-portrait-black-top-grey-background.jpg";
+import woman from "./images/bussiness.jpg";
 
 import { ReactComponent as Play} from "./images/Play.svg";
 import { ReactComponent as LeftQoute} from "./images/LeftQoute.svg";
@@ -35,7 +35,7 @@ function App() {
           <button className="nav__button -secondary">Log in</button>
           <button className="nav__button -primary">Sign up</button>
         </div>
-        <a className="nav__menu" href="#menu">
+        <a className="nav__menu" href="#menu" aria-label="Menu">
           <Menu className="nav__menu-icon" />
         </a>
       </nav>
