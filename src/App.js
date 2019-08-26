@@ -1,4 +1,4 @@
-import React, {Fragment} from "react";
+import React from "react";
 import "./stylesheets/application.sass";
 import logo from "./images/logo.png";
 import woman from "./images/businesswoman-portrait-black-top-grey-background.jpg";
@@ -11,7 +11,7 @@ import { ReactComponent as Menu} from "./images/Menu.svg";
 
 function App() {
   return (
-    <Fragment>
+    <>
       <nav className="nav">
         <img alt="dropl" className="nav__logo" src={logo} />
         <ul className="nav__links">
@@ -123,7 +123,7 @@ function App() {
           <Amazon className="testimonials__company" />
         </div>
       </div>
-    </Fragment>
+    </>
   );
 }
 

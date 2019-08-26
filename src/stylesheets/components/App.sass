@@ -6,9 +6,6 @@
     box-shadow: 0 0 20px 5px rgba($brand-primary, 0.5)
     color: $brand-primary
 
-body
-  background-image: linear-gradient(to right, $brand-secondary,  $color-white)
-
 .nav
   align-items: center
   display: flex
@@ -60,7 +57,7 @@ body
     display: flex
     height: 100px
     justify-content: center
-    margin: $m-lg * 2 0
+    margin: ($m-lg * 2) 0
     width: 100px
 
     &:hover
@@ -86,7 +83,7 @@ body
     padding: $m-xs
 
     &::selection
-      color: $brand-primary
+      background-color: $brand-primary
 
   &__links
     display: flex
@@ -157,7 +154,7 @@ body
     color: $color-black
 
     &.-space
-      margin: $m-xxl * 2 0 $m-xxl 0
+      margin: ($m-xxl * 2) 0 $m-xxl 0
 
   &__companies
     display: flex
@@ -223,10 +220,10 @@ body
 
   .subscribe
     flex-direction: row
-    padding: $m-xxl * 2 $m-xxl
+    padding: ($m-xxl * 2) $m-xxl
 
     &__animation-container, &__start
-      padding: 0 $m-lg * 2
+      padding: 0 ($m-lg * 2)
 
     &__links
       flex-wrap: nowrap
